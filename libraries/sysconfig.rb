@@ -13,7 +13,7 @@ module SysconfigCookbook
     class Sysconfig < Chef::Resource
       include Poise(fused: true)
       provides(:sysconfig)
-      
+
       attribute(:service_name, kind_of: String, name_attribute: true)
       attribute(:settings, option_collector: true, default: {})
 
