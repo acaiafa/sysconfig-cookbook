@@ -1,0 +1,9 @@
+DEPENDENCIES
+  sysconfig
+    path: .
+    metadata: true
+
+GRAPH
+  poise (2.7.0)
+  sysconfig (0.1.0)
+    poise (>= 0.0.0)
