@@ -16,9 +16,20 @@ should use underscores like the examples below.
 ### Recipe
 ```ruby
 default['sysconfig']['servicename'] = 'something'
-default['sysconfig']['config']['settings']['kernel_test'] = 'something'
-default['sysconfig']['config']['settings']['kernel_test2'] = 'something2'
-default['sysconfig']['config']['settings']['kernel_test3'] = 'something3'
+default['sysconfig']['something']['config']['settings']['kernel_test'] = 'something'
+default['sysconfig']['something']['config']['settings']['kernel_test2'] = 'something2'
+default['sysconfig']['something']['config']['settings']['kernel_test3'] = 'something3'
+```
+
+For mutliple sysconfig files you can pass as an array
+```ruby
+default['sysconfig']['servicename'] = ['something','something2']
+default['sysconfig']['something']['config']['settings']['kernel_test'] = 'something'
+default['sysconfig']['something']['config']['settings']['kernel_test2'] = 'something2'
+default['sysconfig']['something']['config']['settings']['kernel_test3'] = 'something3'
+default['sysconfig']['something2']['config']['settings']['kernel_test'] = 'something'
+default['sysconfig']['something2']['config']['settings']['kernel_test2'] = 'something2'
+default['sysconfig']['something2']['config']['settings']['kernel_test3'] = 'something3'
 ```
 
 ### Policyfile
